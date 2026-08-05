@@ -1,25 +1,103 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: #f7faf9;
-  --color-surface: #ffffff;
-  --color-text: #122523;
-  --color-muted: #647571;
-  --color-primary: #277d6d;
-  --color-primary-dark: #145348;
-  --color-primary-light: #dff4ed;
-  --color-accent: #e58955;
-  --color-accent-light: #fff0e6;
-  --font-sans: Inter, "SF Pro Text", "Segoe UI", sans-serif;
-  --font-display: "SF Pro Display", Inter, "Segoe UI", sans-serif;
+:root {
+
+  /* ========= COLORS ========= */
+
+  --background: #F8FBFA;
+  --surface: #FFFFFF;
+  --surface-soft: #F4F8F7;
+
+  --primary: #2F8F7D;
+  --primary-dark: #1D5E55;
+  --primary-light: #D8F1EA;
+
+  --secondary: #F5EBDD;
+  --accent: #E5A97A;
+
+  --text: #132322;
+  --text-light: #51615F;
+  --muted: #74817F;
+
+  --success: #37B37E;
+  --warning: #F0B14A;
+  --danger: #E76A6A;
+
+  /* ========= GLASS ========= */
+
+  --glass-bg: rgba(255, 255, 255, .58);
+
+  --glass-border:
+    rgba(255, 255, 255, .70);
+
+  --glass-blur: 18px;
+
+  /* ========= SHADOWS ========= */
+
+  --shadow-xs:
+    0 2px 8px rgba(16, 24, 40, .05);
+
+  --shadow-sm:
+    0 8px 24px rgba(20, 83, 72, .08);
+
+  --shadow-md:
+    0 18px 40px rgba(20, 83, 72, .12);
+
+  --shadow-lg:
+    0 28px 60px rgba(20, 83, 72, .18);
+
+  --shadow-xl:
+    0 40px 80px rgba(20, 83, 72, .22);
+
+  /* ========= RADIUS ========= */
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+
+  /* ========= SPACING ========= */
+
+  --section-padding: 120px;
+
+  --container: 1200px;
+
+  /* ========= TRANSITIONS ========= */
+
+  --ease:
+    cubic-bezier(.22, .61, .36, 1);
+
+  --transition-fast:
+    .2s var(--ease);
+
+  --transition:
+    .35s var(--ease);
+
+  --transition-slow:
+    .6s var(--ease);
+
+  /* ========= GRADIENTS ========= */
+
+  --gradient-main:
+    linear-gradient(135deg,
+      #2F8F7D 0%,
+      #4DAA8D 50%,
+      #D89163 100%);
+
+  --gradient-light:
+    linear-gradient(145deg,
+      #effaf6 0%,
+      #f8fbfa 45%,
+      #fff8f2 100%);
+
 }
 
-:root {
+/*:root {
   color: #122523;
   background: #f7faf9;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-}
+}*/
 
 * {
   box-sizing: border-box;
@@ -69,6 +147,7 @@ a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -77,4 +156,76 @@ a:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ============================= */
+/* PREMIUM DESIGN UTILITIES */
+/* ============================= */
+
+.glass {
+
+  background: var(--glass-bg);
+
+  backdrop-filter:
+    blur(var(--glass-blur));
+
+  -webkit-backdrop-filter:
+    blur(var(--glass-blur));
+
+  border: 1px solid var(--glass-border);
+
+  box-shadow: var(--shadow-md);
+
+}
+
+.card {
+
+  background: var(--surface);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-md);
+
+  transition: all var(--transition);
+
+}
+
+.card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow-xl);
+
+}
+
+.gradient-text {
+
+  background: var(--gradient-main);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+}
+
+.section {
+
+  padding:
+    var(--section-padding) 0;
+
+}
+
+.container {
+
+  width: min(var(--container),
+      calc(100% - 40px));
+
+  margin-inline: auto;
+
+}
+
+.shadow-premium {
+
+  box-shadow: var(--shadow-xl);
+
 }
