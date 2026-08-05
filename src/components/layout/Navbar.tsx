@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Logo } from "../ui/Logo";
 import { Button } from "../ui/Button";
@@ -35,46 +35,62 @@ export function Navbar() {
           <Logo />
         </Link>
 
-        <div className="hidden items-center gap-1 lg:flex">
-          {NAV_ITEMS.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={({ isActive }) =>
-                cn(
-                  "relative rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300",
-                  isActive
-                    ? "bg-white text-primary-dark shadow-[0_10px_30px_-15px_rgba(20,83,72,.45)]"
-                    : "text-text/65 hover:bg-white/60 hover:text-primary-dark hover:shadow-md"
-                )
-              }
+        <LayoutGroup>
+          <div className="hidden items-center gap-1 lg:flex">
+            {NAV_ITEMS.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  cn(
+                    "relative overflow - hidden rounded - full px - 5 py - 2.5 text - sm font - medium transition - all duration - 300",
+                    isActive
+                      ? "bg-white text-primary-dark shadow-[0_10px_30px_-15px_rgba(20,83,72,.45)]"
+                      : "text-text/65 hover:bg-white/60 hover:text-primary-dark hover:shadow-md"
+                  )
+                }
+              >
+                <>
+                  {item.label}
+
+                  {location.pathname === item.path && (
+                    <motion.div
+                      layoutId="navbar-active"
+                      className="absolute inset-0 -z-10 rounded-full bg-white shadow-[0_10px_30px_-15px_rgba(20,83,72,.45)]"
+                      transition={{
+                        type: "spring",
+                        stiffness: 450,
+                        damping: 35,
+                      }}
+                    />
+                  )}
+                </>
+              </NavLink>
+            ))}
+          </div>
+
+          <div className="hidden items-center gap-3 lg:flex">
+            <Link
+              to={AUTH_ITEM.path}
+              className="rounded-full px-4 py-2 text-sm font-semibold text-text/65 transition-colors duration-200 hover:text-primary-dark"
             >
-              {item.label}
-            </NavLink>
-          ))}
-        </div>
+              {AUTH_ITEM.label}
+            </Link>
+            <Button to={CTA_ITEM.path} size="sm">
+              {CTA_ITEM.label}
+            </Button>
+          </div>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            to={AUTH_ITEM.path}
-            className="rounded-full px-4 py-2 text-sm font-semibold text-text/65 transition-colors duration-200 hover:text-primary-dark"
+          <button
+            type="button"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/60 bg-white/70 shadow-lg backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white lg:hidden"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
           >
-            {AUTH_ITEM.label}
-          </Link>
-          <Button to={CTA_ITEM.path} size="sm">
-            {CTA_ITEM.label}
-          </Button>
-        </div>
-
-        <button
-          type="button"
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/60 bg-white/70 shadow-lg backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white lg:hidden"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </LayoutGroup>
       </nav>
 
       <AnimatePresence>
