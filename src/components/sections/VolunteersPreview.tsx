@@ -23,7 +23,7 @@ export function VolunteersPreview() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 0.55, delay: index * 0.1 }}
-                            className="rounded-[1.75rem] border border-accent/15 bg-[linear-gradient(145deg,#fff7f1_0%,#fffdfb_100%)] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_20px_38px_-28px_rgba(229,137,85,0.46)]"
+                            className="rounded-[1.75rem] border border-primary/15 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_22px_44px_-28px_rgba(28,124,95,0.2)]"
                         >
                             <div className="flex items-center gap-3">
                                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white font-display text-base font-semibold text-accent shadow-sm ring-4 ring-white/70">
@@ -40,7 +40,7 @@ export function VolunteersPreview() {
                                 </div>
                             </div>
 
-                                <p className="mt-6 text-sm italic leading-relaxed text-text/80">
+                            <p className="mt-6 text-sm italic leading-relaxed text-text/80">
                                 {person.blurb}
                             </p>
 
@@ -48,7 +48,7 @@ export function VolunteersPreview() {
                                 {person.tags.map((tag) => (
                                     <span
                                         key={tag}
-                                        className="rounded-full border border-accent/10 bg-white px-3 py-1 text-xs font-medium text-muted"
+                                        className="rounded-full border border-primary/15 bg-primary/5 px-3 py-1 text-xs font-medium text-primary-dark/70"
                                     >
                                         {tag}
                                     </span>

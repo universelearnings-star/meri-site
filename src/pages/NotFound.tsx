@@ -12,7 +12,7 @@ export function NotFound() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="flex max-w-lg flex-col items-center rounded-3xl border border-white/60 bg-white/70 p-12 text-center shadow-2xl shadow-primary/10 backdrop-blur-xl"
+        className="flex max-w-lg flex-col items-center rounded-3xl border border-primary/20 bg-white p-12 text-center shadow-[0_32px_70px_-30px_rgba(28,124,95,0.18)]"
       >
         <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-light text-accent">
           <Compass className="h-7 w-7" />
@@ -23,7 +23,7 @@ export function NotFound() {
         <p className="mt-3 text-xl font-semibold text-text">
           Looks like this path hasn't been mapped yet.
         </p>
-        <p className="mt-3 text-muted">
+        <p className="mt-3 text-primary-dark/70">
           The page you're looking for doesn't exist or has moved. Let's get
           you back to a calmer place.
         </p>

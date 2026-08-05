@@ -21,7 +21,7 @@ export function WhyChoose() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="rounded-[1.6rem] border border-text/5 bg-[#f8fbfa] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:bg-primary-light/30 hover:shadow-[0_18px_36px_-28px_rgba(20,83,72,0.5)]"
+                            className="rounded-[1.6rem] border border-primary/15 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-[0_18px_36px_-28px_rgba(28,124,95,0.24)]"
                         >
                             <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent-light text-accent">
                                 <feature.icon className="h-5 w-5" />
@@ -29,7 +29,7 @@ export function WhyChoose() {
                             <h3 className="mt-6 font-display text-lg font-semibold tracking-[-0.035em] text-text">
                                 {feature.title}
                             </h3>
-                            <p className="mt-2.5 text-sm leading-relaxed text-muted">
+                            <p className="mt-2.5 text-sm leading-relaxed text-primary-dark/70">
                                 {feature.description}
                             </p>
                         </motion.div>

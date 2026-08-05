@@ -21,7 +21,7 @@ export function ResourcesPreview() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative overflow-hidden rounded-[1.6rem] border border-primary/10 bg-gradient-to-br from-primary-light/65 to-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_20px_36px_-28px_rgba(20,83,72,0.5)]"
+                            className="group relative overflow-hidden rounded-[1.6rem] border border-primary/15 bg-white p-7 shadow-[0_20px_40px_-24px_rgba(28,124,95,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_24px_44px_-24px_rgba(28,124,95,0.22)]"
                         >
                             <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-primary/10 blur-2xl transition-transform duration-500 group-hover:scale-125" />
                             <span className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-primary-dark shadow-sm ring-4 ring-white/50">
@@ -30,7 +30,7 @@ export function ResourcesPreview() {
                             <h3 className="mt-6 font-display text-lg font-semibold tracking-[-0.035em] text-text">
                                 {resource.title}
                             </h3>
-                            <p className="mt-2.5 text-sm leading-relaxed text-muted">
+                            <p className="mt-2.5 text-sm leading-relaxed text-primary-dark/70">
                                 {resource.description}
                             </p>
                         </motion.div>

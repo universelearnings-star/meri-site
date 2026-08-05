@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #f7faf9;
+  --color-background: #eaf7f0;
   --color-surface: #ffffff;
-  --color-text: #122523;
-  --color-muted: #647571;
-  --color-primary: #277d6d;
-  --color-primary-dark: #145348;
-  --color-primary-light: #dff4ed;
-  --color-accent: #e58955;
-  --color-accent-light: #fff0e6;
+  --color-text: #0f1f1a;
+  --color-muted: #4a5e57;
+  --color-primary: #1c7c5f;
+  --color-primary-dark: #135b45;
+  --color-primary-light: #a6e0cd;
+  --color-accent: #d36c35;
+  --color-accent-dark: #b45326;
+  --color-accent-light: #ffd6ba;
   --font-sans: Inter, "SF Pro Text", "Segoe UI", sans-serif;
   --font-display: "SF Pro Display", Inter, "Segoe UI", sans-serif;
 
-  color: #122523;
-  background: #f7faf9;
+  color: var(--color-text);
+  background: var(--color-background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -32,18 +33,17 @@ body {
   min-width: 320px;
   margin: 0;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at 10% -10%, rgb(223 244 237 / 0.76), transparent 28rem),
-    #f7faf9;
-  color: #122523;
+  background: radial-gradient(circle at top, rgba(28, 124, 95, 0.12), transparent 35%),
+    linear-gradient(180deg, #f0faf2 0%, #f9fdf9 40%, #ffffff 100%);
+  color: var(--color-text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: #bce6da;
-  color: #123c35;
+  background: var(--color-primary);
+  color: white;
 }
 
 img {

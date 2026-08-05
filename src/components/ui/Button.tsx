@@ -28,12 +28,12 @@ const SIZE_STYLES: Record<Size, string> = {
 
 const VARIANT_STYLES: Record<Variant, string> = {
   primary:
-    "bg-primary text-white shadow-[0_12px_28px_-10px_rgba(20,83,72,0.56)] hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-[0_18px_34px_-12px_rgba(20,83,72,0.64)]",
+    "bg-primary text-white shadow-[0_18px_50px_-22px_rgba(28,124,95,0.45)] hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-[0_22px_58px_-24px_rgba(28,124,95,0.55)]",
   secondary:
-    "bg-primary-light text-primary-dark hover:-translate-y-0.5 hover:bg-[#ccecdf]",
+    "bg-primary-light text-primary-dark shadow-[0_12px_28px_-18px_rgba(28,124,95,0.28)] hover:-translate-y-0.5 hover:bg-[#b8dfc6]",
   outline:
-    "border border-text/10 bg-white/75 text-text shadow-[0_8px_20px_-16px_rgba(18,37,35,0.6)] backdrop-blur-sm hover:-translate-y-0.5 hover:border-primary/35 hover:bg-white hover:text-primary-dark",
-  ghost: "text-text/70 hover:bg-primary-light/60 hover:text-primary-dark",
+    "border border-primary/20 bg-white text-primary-dark shadow-[0_12px_28px_-18px_rgba(28,124,95,0.18)] hover:-translate-y-0.5 hover:bg-primary/10 hover:border-primary/35",
+  ghost: "text-primary-dark hover:bg-primary/10 hover:text-primary-dark",
 };
 
 export function Button({

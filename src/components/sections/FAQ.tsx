@@ -27,8 +27,8 @@ export function FAQ() {
                                 className={cn(
                                     "overflow-hidden rounded-2xl border transition-all duration-300",
                                     isOpen
-                                        ? "border-primary/20 bg-white shadow-[0_18px_36px_-30px_rgba(20,83,72,0.45)]"
-                                        : "border-white/80 bg-white/65 hover:border-primary/15"
+                                        ? "border-primary/20 bg-white shadow-[0_18px_36px_-30px_rgba(28,124,95,0.22)]"
+                                        : "border-primary/15 bg-white hover:border-primary/20"
                                 )}
                             >
                                 <button
@@ -60,7 +60,7 @@ export function FAQ() {
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                                         >
-                                            <p className="px-6 pb-6 text-[15px] leading-relaxed text-muted">
+                                            <p className="px-6 pb-6 text-[15px] leading-relaxed text-primary-dark/70">
                                                 {item.answer}
                                             </p>
                                         </motion.div>

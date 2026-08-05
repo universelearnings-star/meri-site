@@ -18,7 +18,7 @@ export function FinalCTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="mx-auto flex max-w-3xl flex-col items-center rounded-[2rem] border border-white/80 bg-white/65 p-9 text-center shadow-[0_30px_80px_-40px_rgba(20,83,72,0.45)] backdrop-blur-2xl sm:rounded-[2.5rem] sm:p-16"
+        className="mx-auto flex max-w-3xl flex-col items-center rounded-[2rem] border border-primary/15 bg-white p-9 text-center shadow-[0_36px_100px_-45px_rgba(28,124,95,0.22)] sm:rounded-[2.5rem] sm:p-16"
       >
         <span className="inline-flex rounded-full border border-primary/10 bg-primary-light/70 px-3.5 py-1.5 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-primary-dark">
           A softer next step
@@ -26,7 +26,7 @@ export function FinalCTA() {
         <h2 className="mt-5 font-display text-3xl font-semibold tracking-[-0.045em] text-text sm:text-4xl lg:text-5xl">
           You don't have to carry this alone.
         </h2>
-        <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
+        <p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-dark/70">
           Whenever you're ready — today, tonight, or someday soon — MindBridge will
           be here. The first conversation is free, private, and entirely up to you.
         </p>

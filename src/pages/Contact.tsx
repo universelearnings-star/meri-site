@@ -44,7 +44,7 @@ export function Contact() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="mt-6 max-w-2xl text-lg leading-relaxed text-muted"
+        className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-dark/70"
       >
         Whether you have a question about our platform or you're ready to
         book your first session, our team is one message away.
@@ -61,7 +61,7 @@ export function Contact() {
             <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-light text-primary-dark">
               <detail.icon className="h-5 w-5" />
             </span>
-            <span className="text-sm font-medium uppercase tracking-wider text-muted">
+            <span className="text-sm font-medium uppercase tracking-wider text-primary-dark/70">
               {detail.label}
             </span>
             <span className="font-display text-lg font-semibold text-text">

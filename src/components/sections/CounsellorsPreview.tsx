@@ -27,8 +27,8 @@ export function CounsellorsPreview() {
                             className={cn(
                                 "flex flex-col rounded-[1.75rem] border p-8 transition-all duration-300 hover:-translate-y-1",
                                 person.highlighted
-                                    ? "border-primary/25 bg-[linear-gradient(145deg,#e4f8f0_0%,#fff_70%)] shadow-[0_24px_48px_-30px_rgba(20,83,72,0.4)]"
-                                    : "border-white/80 bg-white/75 shadow-[0_18px_36px_-30px_rgba(20,83,72,0.35)] hover:border-primary/20 hover:shadow-[0_25px_48px_-28px_rgba(20,83,72,0.32)]"
+                                    ? "border-primary/25 bg-white shadow-[0_24px_48px_-30px_rgba(28,124,95,0.2)]"
+                                    : "border-primary/10 bg-white shadow-[0_18px_36px_-30px_rgba(28,124,95,0.16)] hover:border-primary/20 hover:shadow-[0_25px_48px_-28px_rgba(28,124,95,0.22)]"
                             )}
                         >
                             <div className="flex items-center gap-4">
@@ -39,7 +39,7 @@ export function CounsellorsPreview() {
                                     <h3 className="font-display text-lg font-semibold tracking-[-0.035em] text-text">
                                         {person.name}
                                     </h3>
-                                    <p className="text-sm text-muted">{person.role}</p>
+                                    <p className="text-sm text-primary-dark/70">{person.role}</p>
                                 </div>
                             </div>
 
@@ -47,7 +47,7 @@ export function CounsellorsPreview() {
                                 {person.focus}
                             </p>
 
-                            <div className="mt-5 flex items-center justify-between border-t border-text/8 pt-4 text-sm text-muted">
+                            <div className="mt-5 flex items-center justify-between border-t border-primary/15 pt-4 text-sm text-primary-dark/70">
                                 <span>{person.years} yrs experience</span>
                                 <span className="flex items-center gap-1 font-semibold text-text">
                                     <Star className="h-4 w-4 fill-accent text-accent" />

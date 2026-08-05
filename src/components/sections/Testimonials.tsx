@@ -25,7 +25,7 @@ export function Testimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 0.6, delay: index * 0.12 }}
-                            className="rounded-[1.75rem] border border-white/15 bg-white/10 p-8 shadow-[0_20px_45px_-35px_rgba(0,0,0,0.5)] backdrop-blur-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/15"
+                            className="rounded-[1.75rem] border border-primary/10 bg-white/10 p-8 shadow-[0_26px_70px_-40px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
                         >
                             <Quote className="h-7 w-7 text-white/40" />
                             <p className="mt-5 text-[15px] leading-relaxed text-white/90">

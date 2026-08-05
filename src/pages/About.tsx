@@ -26,7 +26,7 @@ export function About() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="mt-6 max-w-2xl text-lg leading-relaxed text-muted"
+        className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-dark/70"
       >
         MindBridge exists because reaching out for support should feel as
         natural as reaching out to a friend. Our mission is to close the gap
@@ -47,7 +47,7 @@ export function About() {
         <h2 className="font-display text-2xl font-semibold text-text">
           Our full story is coming soon.
         </h2>
-        <p className="text-muted">
+        <p className="text-primary-dark/70">
           We're putting together our team, values, and impact so far. Check
           back shortly — or reach out if you'd like to know more today.
         </p>

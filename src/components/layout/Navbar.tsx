@@ -26,8 +26,8 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-4 z-50 transition-all duration-500",
         scrolled
-          ? "mx-auto w-[min(96%,1200px)] rounded-2xl border border-white/60 bg-white/70 shadow-[0_25px_70px_-25px_rgba(20,83,72,.35)] backdrop-blur-3xl"
-          : "mx-auto w-[min(98%,1280px)] rounded-3xl bg-white/35 backdrop-blur-xl"
+          ? "mx-auto w-[min(96%,1200px)] rounded-2xl border border-primary/15 bg-white shadow-[0_24px_70px_-30px_rgba(28,124,95,.18)]"
+          : "mx-auto w-[min(98%,1280px)] rounded-3xl border border-primary/10 bg-white shadow-[0_16px_38px_-26px_rgba(28,124,95,.12)]"
       )}
     >
       <nav className="flex h-[72px] items-center justify-between px-7 lg:px-10">
@@ -43,10 +43,10 @@ export function Navbar() {
                 to={item.path}
                 className={({ isActive }) =>
                   cn(
-                    "relative overflow - hidden rounded - full px - 5 py - 2.5 text - sm font - medium transition - all duration - 300",
+                    "relative overflow-hidden rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300",
                     isActive
-                      ? "bg-white text-primary-dark shadow-[0_10px_30px_-15px_rgba(20,83,72,.45)]"
-                      : "text-text/65 hover:bg-white/60 hover:text-primary-dark hover:shadow-md"
+                      ? "bg-primary text-white shadow-[0_12px_36px_-20px_rgba(28,124,95,.35)]"
+                      : "text-text hover:bg-primary/10 hover:text-primary-dark hover:shadow-sm"
                   )
                 }
               >
@@ -72,7 +72,7 @@ export function Navbar() {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               to={AUTH_ITEM.path}
-              className="rounded-full px-4 py-2 text-sm font-semibold text-text/65 transition-colors duration-200 hover:text-primary-dark"
+              className="rounded-full border border-primary/15 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary-dark transition-colors duration-200 hover:bg-primary/15 hover:text-primary-dark"
             >
               {AUTH_ITEM.label}
             </Link>
@@ -84,7 +84,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/60 bg-white/70 shadow-lg backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white lg:hidden"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/20 bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary/10 lg:hidden"
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
           >
@@ -103,7 +103,7 @@ export function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={closeMenu}
-              className="fixed inset-0 top-[4.5rem] z-40 bg-text/20 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 top-[4.5rem] z-40 bg-black/15 lg:hidden"
             />
             <motion.div
               key="drawer"
@@ -111,7 +111,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 320, damping: 32 }}
-              className="fixed inset-y-0 right-0 top-[4.5rem] z-50 flex h-[calc(100vh-4.5rem)] w-full max-w-sm flex-col justify-between border-l border-white/70 bg-white/90 p-6 shadow-2xl backdrop-blur-2xl lg:hidden"
+              className="fixed inset-y-0 right-0 top-[4.5rem] z-50 flex h-[calc(100vh-4.5rem)] w-full max-w-sm flex-col justify-between border-l border-primary/20 bg-white p-6 shadow-[0_28px_80px_-28px_rgba(28,124,95,0.22)] lg:hidden"
             >
               <div className="flex flex-col gap-1">
                 {NAV_ITEMS.map((item, index) => (
@@ -139,11 +139,11 @@ export function Navbar() {
                 ))}
               </div>
 
-              <div className="flex flex-col gap-3 border-t border-text/10 pt-6">
+              <div className="flex flex-col gap-3 border-t border-primary/10 pt-6">
                 <Link
                   to={AUTH_ITEM.path}
                   onClick={closeMenu}
-                  className="rounded-full px-4 py-3 text-center text-sm font-semibold text-text/70 transition-colors duration-200 hover:text-primary-dark"
+                  className="rounded-full px-4 py-3 text-center text-sm font-semibold text-primary-dark transition-colors duration-200 hover:bg-primary/10"
                 >
                   {AUTH_ITEM.label}
                 </Link>

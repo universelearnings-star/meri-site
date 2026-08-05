@@ -22,23 +22,23 @@ export function StoriesPreview() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group flex cursor-pointer flex-col rounded-[1.75rem] border border-white/90 bg-white p-8 shadow-[0_18px_38px_-32px_rgba(20,83,72,0.4)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/15 hover:shadow-[0_25px_48px_-29px_rgba(20,83,72,0.34)]"
+                            className="group flex cursor-pointer flex-col rounded-[1.75rem] border border-primary/15 bg-white p-8 shadow-[0_18px_38px_-32px_rgba(28,124,95,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-[0_25px_48px_-29px_rgba(28,124,95,0.22)]"
                         >
                             <div className="flex items-center justify-between">
                                 <span className="rounded-full bg-primary-light px-3 py-1 text-xs font-bold text-primary-dark">
                                     {story.tag}
                                 </span>
-                                <ArrowUpRight className="h-4 w-4 text-muted transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary-dark" />
+                                <ArrowUpRight className="h-4 w-4 text-primary-dark/70 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary-dark" />
                             </div>
 
                             <h3 className="mt-6 font-display text-xl font-semibold leading-snug tracking-[-0.04em] text-text">
                                 {story.title}
                             </h3>
-                            <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                            <p className="mt-3 flex-1 text-sm leading-relaxed text-primary-dark/70">
                                 {story.excerpt}
                             </p>
 
-                            <span className="mt-6 text-xs font-medium uppercase tracking-wider text-muted/70">
+                            <span className="mt-6 text-xs font-medium uppercase tracking-wider text-primary-dark/60">
                                 {story.readTime} read
                             </span>
                         </motion.article>

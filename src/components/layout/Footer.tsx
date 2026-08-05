@@ -14,13 +14,13 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-text/5 bg-[#f1f7f5]">
-      <div className="pointer-events-none absolute -bottom-44 -left-24 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+    <footer className="relative overflow-hidden border-t border-primary/15 bg-[#ecf8f1]">
+      <div className="pointer-events-none absolute -bottom-44 -left-24 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <Logo />
-            <p className="mt-5 text-sm leading-relaxed text-muted">
+            <p className="mt-5 text-sm leading-relaxed text-primary-dark/70">
               MindBridge connects people with licensed counsellors and trained
               volunteer listeners, offering a calm, private space to be heard,
               understood, and supported — one conversation at a time.
@@ -36,7 +36,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/10 bg-white/70 text-primary-dark shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-white"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/10 bg-white text-primary-dark shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-white"
                   >
                     <Icon className="h-4 w-4" />
                   </a>
@@ -55,7 +55,7 @@ export function Footer() {
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className="text-sm text-muted transition-colors duration-200 hover:text-primary-dark"
+                      className="text-sm text-primary-dark/70 transition-colors duration-200 hover:text-primary-dark"
                     >
                       {link.label}
                     </Link>
@@ -66,7 +66,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-text/10 pt-8 text-sm text-muted sm:flex-row">
+        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-primary/15 pt-8 text-sm text-primary-dark/70 sm:flex-row">
           <p>© {year} MindBridge. All rights reserved.</p>
           <p className="text-center">Built with care, for every mind that needs a bridge.</p>
         </div>

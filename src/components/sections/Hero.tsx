@@ -18,10 +18,10 @@ export function Hero() {
   return (
     <section aria-labelledby="hero-heading" className="relative isolate overflow-hidden">
       {/* Base Background */}
-      <div className="pointer-events-none absolute inset-0 -z-30 bg-[linear-gradient(180deg,#f8fffc_0%,#f6fbfa_40%,#ffffff_100%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-30 bg-[linear-gradient(180deg,#e5f5ed_0%,#f5fbf8_40%,#ffffff_100%)]" />
 
       {/* Aurora Glow */}
-      <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(circle_at_20%_20%,rgba(58,175,137,.16),transparent_28%),radial-gradient(circle_at_80%_18%,rgba(255,170,120,.12),transparent_24%),radial-gradient(circle_at_50%_70%,rgba(42,157,143,.08),transparent_36%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(circle_at_20%_20%,rgba(28,124,95,.22),transparent_28%),radial-gradient(circle_at_80%_18%,rgba(211,108,53,.18),transparent_24%)]" />
 
       {/* Grid Texture */}
       <div
@@ -61,7 +61,7 @@ export function Hero() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute -left-44 top-24 -z-10 h-[34rem] w-[34rem] rounded-full bg-primary/18 blur-[120px]"
+        className="pointer-events-none absolute -left-44 top-24 -z-10 h-[34rem] w-[34rem] rounded-full bg-primary/25 blur-[100px]"
       />
 
       {/* Large Right Glow */}
@@ -82,7 +82,7 @@ export function Hero() {
           ease: "easeInOut",
           delay: 2,
         }}
-        className="pointer-events-none absolute -right-44 top-16 -z-10 h-[32rem] w-[32rem] rounded-full bg-[#f2b287]/20 blur-[120px]"
+        className="pointer-events-none absolute -right-44 top-16 -z-10 h-[32rem] w-[32rem] rounded-full bg-accent/20 blur-[100px]"
       />
 
 
@@ -134,7 +134,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white/65 px-3.5 py-2 text-xs font-semibold text-primary-dark shadow-[0_10px_30px_-20px_rgba(20,83,72,0.5)] backdrop-blur-xl sm:text-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary-light/25 px-3.5 py-2 text-xs font-semibold text-primary-dark shadow-[0_10px_30px_-20px_rgba(28,124,95,0.22)] sm:text-sm"
         >
           <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary-light">
             <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
@@ -153,7 +153,7 @@ export function Hero() {
 
         <motion.p
           {...fadeUp(0.2)}
-          className="mt-8 max-w-2xl text-base leading-relaxed text-muted sm:text-lg"
+          className="mt-8 max-w-2xl text-base leading-relaxed text-primary-dark/70 sm:text-lg"
         >
           MindBridge connects you with licensed counsellors and trained volunteer
           listeners — privately, anonymously, and entirely at your own pace.
@@ -204,13 +204,13 @@ export function Hero() {
               duration: 0.25,
               ease: "easeOut",
             }}
-            className="rounded-3xl border border-white/60 bg-white/55 backdrop-blur-3xl border-white/70 p-6 shadow-[0_35px_80px_-30px_rgba(20,83,72,.22)]"
+            className="rounded-3xl border border-primary/10 bg-white p-6 shadow-[0_35px_80px_-30px_rgba(28,124,95,.22)]"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100">🟢</div>
 
               <div>
-                <p className="text-sm text-muted">Counsellors Online</p>
+                <p className="text-sm text-primary-dark/70">Counsellors Online</p>
                 <h3 className="text-2xl font-semibold text-text">247 Available</h3>
               </div>
             </div>
@@ -239,13 +239,13 @@ export function Hero() {
               duration: 0.25,
               ease: "easeOut",
             }}
-            className="rounded-3xl border border-white/60 bg-white/55 backdrop-blur-3xl border-white/70 p-6 shadow-[0_35px_80px_-30px_rgba(20,83,72,.22)]"
+            className="rounded-3xl border border-primary/10 bg-white p-6 shadow-[0_35px_80px_-30px_rgba(28,124,95,.22)]"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-light">🔒</div>
 
               <div>
-                <p className="text-sm text-muted">Anonymous Chat</p>
+                <p className="text-sm text-primary-dark/75">Anonymous Chat</p>
                 <h3 className="text-xl font-semibold text-text">End-to-End Encrypted</h3>
               </div>
 
@@ -262,7 +262,7 @@ export function Hero() {
               />
             </div>
 
-            <p className="mt-5 text-sm leading-relaxed text-muted">
+            <p className="mt-5 text-sm leading-relaxed text-primary-dark/70">
               Your conversations stay private and protected.
             </p>
           </motion.div>
@@ -276,18 +276,18 @@ export function Hero() {
               duration: 0.25,
               ease: "easeOut",
             }}
-            className="rounded-3xl border border-white/60 bg-white/55 backdrop-blur-3xl border-white/70 p-6 shadow-[0_35px_80px_-30px_rgba(20,83,72,.22)]"
+            className="rounded-3xl border border-primary/10 bg-white p-6 shadow-[0_35px_80px_-30px_rgba(28,124,95,.22)]"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100">⭐</div>
 
               <div>
-                <p className="text-sm text-muted">Community Rating</p>
+                <p className="text-sm text-primary-dark/75">Community Rating</p>
                 <h3 className="text-2xl font-semibold text-text">4.9 / 5</h3>
               </div>
             </div>
 
-            <p className="mt-5 text-sm text-muted">Trusted by more than</p>
+            <p className="mt-5 text-sm text-primary-dark/70">Trusted by more than</p>
             <p className="text-3xl font-bold text-primary-dark">15,000+</p>
           </motion.div>
         </motion.div>
@@ -301,7 +301,7 @@ export function Hero() {
               <div className="font-display text-3xl font-bold text-text">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
-              <p className="mt-2 text-sm text-muted">{stat.label}</p>
+              <p className="mt-2 text-sm text-primary-dark/70">{stat.label}</p>
             </div>
           ))}
         </motion.div>

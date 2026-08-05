@@ -5,7 +5,7 @@ import { TRUST_STATS } from "../../data/home";
 
 export function TrustBar() {
     return (
-        <section className="relative border-y border-text/5 bg-white/70 backdrop-blur-sm">
+        <section className="relative border-y border-primary/15 bg-[#f4f9f6]">
             <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
                 <div className="grid grid-cols-2 divide-x divide-text/8 sm:grid-cols-4">
                     {TRUST_STATS.map((stat, index) => (
@@ -20,7 +20,7 @@ export function TrustBar() {
                             <span className="font-display text-2xl font-semibold tracking-[-0.04em] text-primary-dark sm:text-3xl">
                                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                             </span>
-                            <span className="mt-2 max-w-32 text-xs leading-relaxed text-muted sm:text-sm">{stat.label}</span>
+                            <span className="mt-2 max-w-32 text-xs leading-relaxed text-primary-dark/70 sm:text-sm">{stat.label}</span>
                         </motion.div>
                     ))}
                 </div>
