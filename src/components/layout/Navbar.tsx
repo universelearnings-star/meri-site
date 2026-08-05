@@ -24,13 +24,13 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-4 z-50 transition-all duration-500",
         scrolled
-          ? "border-b border-white/70 bg-white/75 shadow-[0_8px_28px_-18px_rgba(18,37,35,0.34)] backdrop-blur-2xl"
-          : "border-b border-transparent bg-background/30 backdrop-blur-sm"
+          ? "mx-auto w-[min(96%,1200px)] rounded-2xl border border-white/60 bg-white/70 shadow-[0_25px_70px_-25px_rgba(20,83,72,.35)] backdrop-blur-3xl"
+          : "mx-auto w-[min(98%,1280px)] rounded-3xl bg-white/35 backdrop-blur-xl"
       )}
     >
-      <nav className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-5 sm:h-20 sm:px-6 lg:px-10">
+      <nav className="flex h-[72px] items-center justify-between px-7 lg:px-10">
         <Link to="/" onClick={closeMenu} aria-label="MindBridge home">
           <Logo />
         </Link>
@@ -42,10 +42,10 @@ export function Navbar() {
               to={item.path}
               className={({ isActive }) =>
                 cn(
-                  "rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200",
+                  "relative rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300",
                   isActive
-                    ? "bg-primary-light text-primary-dark shadow-sm shadow-primary/5"
-                    : "text-text/65 hover:bg-white/80 hover:text-text"
+                    ? "bg-white text-primary-dark shadow-[0_10px_30px_-15px_rgba(20,83,72,.45)]"
+                    : "text-text/65 hover:bg-white/60 hover:text-primary-dark hover:shadow-md"
                 )
               }
             >
@@ -69,7 +69,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-text/5 bg-white/60 text-text shadow-sm backdrop-blur-sm transition-colors duration-200 hover:bg-primary-light lg:hidden"
+          className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/60 bg-white/70 shadow-lg backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white lg:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
         >
